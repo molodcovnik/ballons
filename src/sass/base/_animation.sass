@@ -1,0 +1,29 @@
+@keyframes btnToUp
+    0% 
+        opacity: 0
+        transform: translateY(50px) // нулевая точка не видна и смещена по Y на -100px
+    
+    100%
+        opacity: 1
+        transform: translateY(0px) // устанавлиевается как нужно        
+
+
+@keyframes leftToRight
+    0% 
+        opacity: 0
+        transform: translateX(-50%) // нулевая точка не видна и смещена по Х на -50%
+    80% 
+        transform: translateX(3%) // выезжает на 3%
+    100%
+        opacity: 1
+        transform: translateX(0px) // устанавлиевается как нужно
+            
+@keyframes rightToLeft
+    0% 
+        opacity: 0
+        transform: translateX(50%) // нулевая точка не видна и смещена по Х на -50%
+    80% 
+        transform: translateX(-3%) // выезжает на 5%
+    100%
+        opacity: 1
+        transform: translateX(0px) // устанавлиевается как нужно

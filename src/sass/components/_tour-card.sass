@@ -1,0 +1,88 @@
+.card-tour 
+    height: 50rem
+    
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    
+    &__side
+        height: 50rem
+        transition: all .7s ease-out
+        color: $color-white
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        box-shadow: $box-shadow
+        border-radius: .5rem
+        overflow: hidden  // изображение не закруглилось и применяем оверфлоу хидден
+        &_front
+        &_back
+            transform: rotateY(180deg)
+            background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+    &__img
+        background-blend-mode: hard-light
+        height: 21rem
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        &_1
+            background: $color-brown-light url('../img/card1.svg') center/ cover no-repeat
+        &_2
+            background: $color-brown-light url('../img/card2.svg') center/ cover no-repeat
+        &_3
+            background: $color-brown-light url('../img/card3.svg') center/ cover no-repeat
+    &__title
+        font-size: 2.8rem
+        letter-spacing: 0.2rem
+        font-weight: 800
+        text-transform: uppercase
+        text-align: right
+        position: absolute
+        top: 17rem
+        right: 0rem
+    &__span
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+        padding: 1rem 2rem .3rem 2rem
+        &_1
+        &_2
+            position: absolute
+            top: 3.3rem
+            right: 0rem
+            padding-bottom: 1rem
+    &__descr
+        ul
+            list-style: none
+            width: 75%
+            margin: 0 auto
+            text-align: center
+            li
+                font-size: 1.6rem
+                font-weight: 700
+                letter-spacing: .2rem
+                color: $color-grey
+                border-bottom: 1px solid $color-grey
+                display: inline-block
+                
+                &:not(:last-child)
+                    margin-bottom: 2rem
+    &__backSide-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__text
+        margin-bottom: 9rem
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        &_1
+            font-size: 1.6rem
+            font-weight: 300
+            
+        &_2
+            font-size: 6rem
+            font-weight: 500

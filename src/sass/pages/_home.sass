@@ -1,0 +1,22 @@
+.title-secondary 
+    padding-top: 8rem
+
+.section-adventure
+    padding: 21rem 0
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url('../img/img-adventure.svg') center/ cover no-repeat
+    // clip-path: polygon(0 10%, 100% 20%, 100% 90%, 0 80%)
+    transform: skewY(7deg) // dторой вариант повернуть изображение
+    & > *
+        transform: skewY(-7deg) // вариант отменить поворот потомкам
+
+.section-tour
+    padding-top: 11rem
+    // margin-bottom: 8rem
+
+.section-feedBack
+    padding-top: 8rem
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url('../img/shary.svg') center/ cover no-repeat
+
+.section-book
+    padding: 10rem
+    background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
